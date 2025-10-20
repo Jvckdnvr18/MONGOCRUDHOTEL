@@ -14,6 +14,10 @@ connectDB();
 const app = express();
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+	res.send('Welcome to the Hotel Management API');
+});
+
 // Mount the new routes
 app.use('/api', roomRoutes);
 app.use('/api', guestRoutes);
