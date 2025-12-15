@@ -1,5 +1,5 @@
-const Booking = require('/Users/Admin/Documents/Back_end_MONGOCRUD/models/bookingModel');
-const Room = require('/Users/Admin/Documents/Back_end_MONGOCRUD/models/roomModel');
+const Booking = require('../models/bookingModel');
+const Room = require('../models/roomModel');
 
 // CRUD operations for Bookings
 exports.createBooking = async (req, res) => {

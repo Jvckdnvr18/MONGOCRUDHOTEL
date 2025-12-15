@@ -1,4 +1,4 @@
-const Room = require('/Users/Admin/Documents/Back_end_MONGOCRUD/models/roomModel');
+const Room = require('../models/roomModel');
 
 // CRUD operations for Rooms
 exports.createRoom = async (req, res) => {

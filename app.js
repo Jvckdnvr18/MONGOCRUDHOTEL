@@ -1,12 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
-const connectDB = require("/Users/Admin/Documents/Back_end_MONGOCRUD/config/db");
+const connectDB = require('./config/db');
 
 // Import new routes
-const roomRoutes = require('/Users/Admin/Documents/Back_end_MONGOCRUD/routes/roomRoutes')
-const guestRoutes = require('/Users/Admin/Documents/Back_end_MONGOCRUD/routes/guestRoutes')
-const bookingRoutes = require('/Users/Admin/Documents/Back_end_MONGOCRUD/routes/bookingRoutes')
+const roomRoutes = require('./routes/roomRoutes');
+const guestRoutes = require('./routes/guestRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
 
 dotenv.config();
 connectDB();
@@ -14,6 +14,9 @@ connectDB();
 const app = express();
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+	res.send('Welcome to the Hotel Management API');
+});
 // Mount the new routes
 app.use('/api', roomRoutes);
 app.use('/api', guestRoutes);

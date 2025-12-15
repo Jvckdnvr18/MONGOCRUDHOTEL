@@ -1,4 +1,4 @@
-const Guest = require('/Users/Admin/Documents/Back_end_MONGOCRUD/models/guestModel');
+const Guest = require('../models/guestModel');
 
 // CRUD operations for Guests
 exports.createGuest = async (req, res) => {
