@@ -17,6 +17,10 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
 	res.send('Welcome to the Hotel Management API');
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> bb13c8b2cd03382b1ad91a8a3d6284630726249f
 // Mount the new routes
 app.use('/api', roomRoutes);
 app.use('/api', guestRoutes);
